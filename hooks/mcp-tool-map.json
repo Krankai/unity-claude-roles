@@ -1,0 +1,14 @@
+{
+  "_format": {
+    "about": "Maps each Unity MCP tool (name without the mcp__unity-mcp__ prefix) to a capability M1-M13 from the roles README. Keys starting with '_' are ignored. Tools not listed here are M13 (blocked for every role), except tools named Design_*, which are M8.",
+    "one capability": "\"Unity_ReadConsole\": \"M1\"",
+    "several actions": "\"Unity_ManageAsset\": { \"actionParam\": \"action\", \"actions\": { \"create\": \"M3\", \"modify\": \"M3\", \"delete\": \"M5\", \"move\": \"M5\", \"rename\": \"M5\" } }  (unlisted actions are M13)",
+    "menu-item tool": "\"Unity_ExecuteMenuItem\": { \"menuParam\": \"menu_path\" }  (Tools/Design/* is M8, anything else M9)",
+    "custom-tool runner": "\"Unity_RunCustomTool\": { \"customToolParam\": \"tool_name\" }  (Design_* is M8, anything else M9)",
+    "fixed capability, object form": "\"Unity_Something\": { \"capability\": \"M4\", \"pathParams\": [\"path\"] }",
+    "pathParams": "Parameters holding project file paths. Each path must pass file rules 1-6. The top-level list applies to every tool; a tool's own list replaces it."
+  },
+  "server": "unity-mcp",
+  "pathParams": [],
+  "tools": {}
+}

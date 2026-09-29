@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "ask": ["Bash", "PowerShell"]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|NotebookEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "shell": "powershell",
+            "command": "& \"$env:CLAUDE_PROJECT_DIR\\.claude\\agents\\unity-roles\\hooks\\role-guard.ps1\""
+          }
+        ]
+      },
+      {
+        "matcher": "mcp__unity-mcp__.*",
+        "hooks": [
+          {
+            "type": "command",
+            "shell": "powershell",
+            "command": "& \"$env:CLAUDE_PROJECT_DIR\\.claude\\agents\\unity-roles\\hooks\\role-guard.ps1\""
+          }
+        ]
+      }
+    ]
+  }
+}
