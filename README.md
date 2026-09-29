@@ -28,6 +28,7 @@ The guide must follow the expected layout: `AGENTS.md`, `UnityCustomInstructions
 | `hooks/role-guard.ps1` | Enforces the file rules and Unity MCP rules below |
 | `hooks/mcp-tool-map.json` | Maps each Unity MCP tool to a capability; filled in per MCP version |
 | `templates/` | Files copied into a project at setup, and templates for project docs |
+| `PILOT-CHECKLIST.md` | Checks to run on a pilot project before relying on the roles |
 
 ## Project setup
 
